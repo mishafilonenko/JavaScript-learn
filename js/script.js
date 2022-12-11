@@ -2,72 +2,87 @@
 
 // Консольное приложение практика ч1 - Задание не выполнено самостоятельно :(
 
-// const number0Films = prompt('Сколько фильмов вы уже посмотрели?', '');
+const number0Films = prompt('Сколько фильмов вы уже посмотрели?', '');
 
-// const personalMovieDB = {
-//    count: number0Films,
-//    movies: {},
-//    actors: {},
-//    genres: [],
-//    privat: false
-// };
+
+const personalMovieDB = {
+   count: number0Films,
+   movies: {},
+   actors: {},
+   genres: [],
+   privat: false
+};
+
 
 // const a = prompt('Какой последний фильм вы смотрели?', ''),
 //       b = prompt('Какую оценку вы бы поставили фильму?', ''),
 //       c = prompt('Какой последний фильм вы смотрели?', ''),
-//       d = prompt('Какую оценку вы бы поставили фильму?', '');
+//       d = prompt('Какую оценку вы бы поставили фильму?', '');     Эту часть кода мы оптимизировали с помощью цикла фор
 
 // personalMovieDB.movies[a] = b;
-// personalMovieDB.movies[c] = d;       
+// personalMovieDB.movies[c] = d;     
+
+for ( let i = 0; i < 2; i++) {
+
+   const a = prompt('Какой последний фильм вы смотрели?', ''),
+         b = prompt('Какую оценку вы бы поставили фильму?', '');
+
+   if ( a != null && b != null && a != '' && b != '' && a.length < 50) {        // здесь мы прописали условие что - ответ на первый вопрос (a) не была нажата кнопка отменна (null),
+         personalMovieDB.movies[a] = b;                                         // то же самое и для второго вопроса (b), а так же что что ответ на первый вопрос не пустой и второй
+         console.log('Успешно');                                                // записывается пустая строка при нажатии кнопки ok без веденного ответа! а так же чо длина ответа на первый вопрос не длинее 50 символов
+   } else {
+      console.log('Не успешно. Ошибка');
+      i--;
+   }
+}
+
+if (personalMovieDB.count < 10) {
+   console.log('Просмотренно довольно мало фильмов'); 
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+   console.log('Вы класический зритель');
+} else if ( personalMovieDB.count >= 30) {
+   console.log('Вы киноман :)');
+} else {
+   console.log('Произошла ошибка');
+}
+
+console.log(personalMovieDB);
+
+// переписать эти циклы ещё 2 способами
+
+// let i = 0;
+
+// while ( i < 2) {
+//    const a = prompt('Какой последний фильм вы смотрели?', ''),
+//          b = prompt('Какую оценку вы бы поставили фильму?', '');
+//       i++;
+//    if ( a != null && b != null && a != '' && b != '' && a.length < 50) {        
+//          personalMovieDB.movies[a] = b;                                         
+//          console.log('Успешно');                                                
+//    } else {
+//       console.log('Не успешно. Ошибка');
+//       i--;
+//    }  
+
+// }
 
 // console.log(personalMovieDB);
 
 
-// вывести значения с масива
-
-const userName = ['Алексей', 'Михаил', 'Аркадий', 'Евгений', 'Артём']; //lenght (длина масива 5, так как у нас в масиве 5 значений.)
-
-console.log(userName.length);
-
-let i = 0;
-
-while (i < userName.length) {
-   console.log(userName[i]);
-   i++;
-}
-
-
-
-// const usersName = {
-//    nameUser: {
-//       nameOne: 'Misha',
-//       nameTwo: 'Alex',
-//       nameThree: 'Sergei',
-//       nameFo: 'Max'
-//    }
-// };
-
 // let j = 0;
 
-// console.log(usersName.nameUser);
+// do {
+//    const a = prompt('Какой последний фильм вы смотрели?', ''),
+//          b = prompt('Какую оценку вы бы поставили фильму?', '');
+//          j++;
 
-// while ( j < nameUser.length) {
-//    console.log(usersName.nameUser);
-//    j++;
-// }
+//          if ( a != null && b != null && a != '' && b != '' && a.length < 50) {       
+//             personalMovieDB.movies[a] = b;                                         
+//             console.log('Успешно');                                                
+//       } else {
+//          console.log('Не успешно. Ошибка');
+//          i--;
+//       }   
+// } while ( j < 2);
 
-
-/* Есть массив Друзей:
-
-var friends = [" Алексей", " Вячеслав", " Григорий", " Настя", " Николай", " Павел", " Любовь", " Егор", " Лэйла"];
-
-С помощью цикла while нужно вывести на экран всех друзей, начиная с Григория и заканчивая Любовью. При условии, что мы видим массив и знаем, как в нём расположены его элементы. */
-
-
-const friends = [" Алексей", " Вячеслав", " Григорий", " Настя", " Николай", " Павел", " Любовь", " Егор", " Лэйла"];
-let k = 2;
-
-while ( k < 7) {
-   console.log (friends[k]);
-   k++;
-}
+// console.log(personalMovieDB);
