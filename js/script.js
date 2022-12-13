@@ -86,3 +86,123 @@ console.log(personalMovieDB);
 // } while ( j < 2);
 
 // console.log(personalMovieDB);
+
+
+let num = 20;
+
+function showFirstMesaage (text) {
+   console.log(text);
+   num = 10;
+}
+
+showFirstMesaage('10'+'1000');
+console.log(num);
+
+function calc(a,b) {
+   return (a + b);
+}
+
+console.log(calc(4,3));
+
+function ret() {
+   let num = 'test Misha';
+   return num;
+}
+
+const test = ret();
+console.log(test);
+
+
+function calcs (a, b, c, d) {
+   return (a + b - (c + d));
+}
+
+console.log(calcs(10, 10, 5, 10));
+
+const logger = function () {
+   console.log('Hello');
+};
+
+logger();
+
+const calcTwo = (a, b, c , d) => a + b - (c + d);
+
+console.log(calcTwo(10, 10, 5, 10));
+
+
+
+
+//First Task
+const userName = 'антон';
+
+function sayHello (name) {
+   console.log(`Привет ${name}`);
+}
+
+sayHello(userName);
+
+//-----------------//
+
+//Twotask
+let numMass = [];
+
+function returnNeighboringNumbers(num) {
+   return [num - 1, num, num + 1];
+}
+returnNeighboringNumbers(5);
+
+
+numMass = returnNeighboringNumbers(5);
+console.log(numMass);
+
+
+
+
+
+
+
+
+const arr = [3, 5, 8, 16, 20, 23, 50];
+let result = [];
+
+for (let i = 0; i < arr.length; i++) {
+   
+
+}
+
+
+
+console.log(result);
+console.log(arr);
+
+/* Измените данный массив так, чтобы все числа были увеличены в 2 раза, а если попадается строка строка - то к ней было добавлено " - done".
+Для определения типа данных используйте typeof();
+Должно получиться: [ 10, 20, 'Shopping - done', 40, 'Homework - done' ] */
+
+//  let data = [ 10, 20, 'Shopping', 40, 'Homework' ];
+
+ for ( let i = 0; i <= data.length; i++) {
+   if (typeof (data[i]) === 'number') {
+      data[i] = data[i] * 2;
+   } else if (typeof (data[i]) === 'string') {
+      data [i] = `${data[i]} - done`;
+   }
+ }
+
+ console.log(data);
+
+
+ /* Разверните массив data наоборот при помощи цикла и запишите данные в массив result.
+Должно получиться: [ 'Homework', 20, 'Shopping', 10, 5 ] */
+
+
+
+const datas = [5, 10, 'Shopping', 20, 'Homework'];
+const results = [];
+
+
+    for (let i = 1; i <= datas.length; i++) {
+        results[i - 1] = datas[datas.length - i]
+    }
+
+console.log(results);
