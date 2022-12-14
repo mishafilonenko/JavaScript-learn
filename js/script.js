@@ -88,6 +88,12 @@ console.log(personalMovieDB);
 // console.log(personalMovieDB);
 
 
+
+
+
+
+
+
 let num = 20;
 
 function showFirstMesaage (text) {
@@ -206,3 +212,13 @@ const results = [];
     }
 
 console.log(results);
+
+
+
+const userHelloName = 'Hello Misha!';
+
+console.log(userHelloName.slice(0,5));  // Выведет слово Hello
+
+
+
+
