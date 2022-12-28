@@ -93,3 +93,47 @@ function writeYourGenres () {
 
 
 writeYourGenres();
+
+
+const arr = [1, 3, 4, 5, 8, 10];          //Задача на получение суммы всех значений массива.
+
+let acc = 0;
+
+for( let i = 0; i < arr.length; i++) {
+   acc += arr[i];
+}
+
+console.log(acc);
+
+
+const array = [556, -1, 10 , 35, 25, 100, 300, 555];    // Задача на поиск самого большого значения в массиве.
+
+let max = array[0];
+
+for (let i = 0; i > array.length; i++) {
+
+   if ( array[i] < max) {
+      max = array[i];
+   }
+}
+
+console.log(max);
+
+
+// calback function;
+
+
+function first (lang, calback) {
+   console.log(`Я учу сейчас: ${lang}`);
+   calback();
+}
+
+function calbacks () {
+   console.log('И мне это нравится');  //Второй вариант записи calback function
+}
+
+// first('JavaScript (Взрыв бошки)', function () {
+//    console.log('И у меня это получается)');
+// });
+
+first('JavaScript', calbacks);  //Второй вариант записи calback function (Функция передаётся в качестве аргумента но не ставится () при её вызове, так как этот вызов происходит внутри первой функции);
