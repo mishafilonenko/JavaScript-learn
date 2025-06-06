@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Demo</title>
+<style>
+ body {
+   margin: 0;
+   font-family: Arial, sans-serif;
+   background: #000;
+   color: #fff;
+ }
+ section {
+   padding: 60px 20px;
+   text-align: center;
+ }
+ .hero {
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: url('https://media.giphy.com/media/3o7aCTfyhYawdOXcFW/giphy.mp4') center/cover no-repeat;
+   color: #fff;
+ }
+ .hero h1 {
+   font-size: 2em;
+   line-height: 1.4;
+   max-width: 600px;
+ }
+ .ai {
+   background: #111;
+   color: #0f0;
+ }
+ .ai h2 {
+   margin-bottom: 20px;
+ }
+ .not-advert {
+   background: #000;
+   color: #fff;
+ }
+ .not-advert button {
+   margin-top: 20px;
+   padding: 10px 20px;
+   background: #0f0;
+   border: none;
+   color: #000;
+   cursor: pointer;
+ }
+ .personalization {
+   background: #111;
+ }
+ .cta {
+   background: #000;
+ }
+ button.cta {
+   background: #ffd700;
+   color: #000;
+   border: none;
+   padding: 15px 25px;
+   cursor: pointer;
+   margin: 10px;
+ }
+ .checkbox-group {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 20px;
+ }
+ .checkbox-group label {
+   margin: 5px 0;
+ }
+</style>
+<!-- This page references "Google Finance AI" for demonstration purposes only. Not affiliated with Google. -->
+</head>
+<body>
+<section class="hero">
+  <h1>Рынком больше не управляют люди.<br>Они включили машину.<br>Она зарабатывает миллионы.<br>И до сих пор ты был вне.</h1>
+</section>
+<section class="ai">
+  <h2>Google Finance AI — та самая система</h2>
+  <p>Эта система создавалась в закрытых клубах.<br>Без доступа для большинства.<br>Она не даёт советов. Она принимает решения.<br>Всё, что от тебя нужно — включить её.</p>
+</section>
+<section class="not-advert">
+  <p>Это не реклама.<br>Это не курс.<br>Это не инвестиционный совет.<br>Это доступ к механизму, о котором ты не должен был узнать.</p>
+  <button>Посмотреть, как работает система</button>
+</section>
+<section class="personalization">
+  <h2>Ты не обязан быть трейдером.<br>AI будет им вместо тебя.</h2>
+  <div class="checkbox-group">
+    <label><input type="checkbox" checked> Я не умею торговать</label>
+    <label><input type="checkbox" checked> У меня нет времени</label>
+    <label><input type="checkbox" checked> Я устал терять</label>
+  </div>
+  <button class="cta">Рассчитать прибыль на основе твоих данных</button>
+</section>
+<section class="cta">
+  <h2>Хватит наблюдать. Пора подключиться.</h2>
+  <p>Начни с 230 €.<br>Получи план.<br>Посмотри, как AI может зарабатывать вместо тебя.</p>
+  <button class="cta">Пройти тест</button>
+  <button class="cta">Активировать AI</button>
+</section>
+</body>
+</html>
